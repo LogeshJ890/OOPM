@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int area(int side) {
+    int area = side *side;
+    return area;
+}
+
+
+int area(int length, int breadth) {
+    int area = length * breadth;
+    return area ;
+}
+
+float area(float radius) {
+    float area = 3.14 * radius * radius;
+    return area ;
+}
+
+int main() {
+    
+    int side, length, breadth;
+    float radius;
+    int choice;
+    cout << "Enter  the geometric to calculate the area :" << endl << "1.Square "<< endl << "2.Rectangle" <<endl<<"3.Circle"<<endl;
+    cin >> choice ;
+    
+    if(choice == 1){
+        cout << "Enter side of square: ";
+        cin >> side;
+        cout << "Area of square = " << area(side) << endl;
+    }
+    else if(choice == 2){
+        cout << "Enter length and breadth of rectangle: ";
+        cin >> length >> breadth;
+        cout << "Area of rectangle = " << area(length, breadth) << endl;
+    }
+    else if (choice == 3){
+        cout << "Enter radius of circle: ";
+        cin >> radius;
+        cout << "Area of circle = " << area(radius) << endl;   
+    }
+    else {
+        cout << "Enter correct choice";
+    }
+
+
+
+    return 0;
+}
